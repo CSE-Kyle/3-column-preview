@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <title>Document</title>
+        <style>
+            .heading {
+                text-align: center;
+                background: #f4f4f4;
+            }
+
+            h1 {
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            p {
+                font-size: 20px;
+                font-family: 'Raleway', sans-serif;
+            }
+
+            .btn {
+                border: none;
+                color: white;
+                font-size: 15px;
+                cursor: pointer;
+                padding: 10px 20px;
+                border-radius: 3px;
+            }
+
+            .submit {
+                background-color: #008CBA;
+            }
+
+            .reset {
+                background-color: red;
+            }
+
+            .btn:hover {
+                background: #d2d2d2;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form action="form.php">
+            <div class="heading">
+                <h1>Registration form</h1>
+
+                <p>
+                    this is a registration form but this is some random text,
+                    please fill out the information below.
+                </p>
+            </div>
+
+            <div class="name-input">
+                <label for="name">Name :</label>
+                <input type="text" id="name" placeholder="first and last">
+            </div>
+
+            <br><br>
+
+            <div class="age-input">
+                <label for="age">Age :</label>
+                <input type="text" id="age">
+            </div>
+
+            <br><br>
+
+            <div class="gender-input">
+                <label for="gender">Gender :</label>
+                <br>
+                <input type="radio" name="sex" value="male">Male
+                <br>
+                <input type="radio" name="sex" value="female">Female
+                <br>
+                <input type="radio" name="sex" value="prefer not to answer">Prefer not to answer
+            </div>
+
+            <br>
+
+            <div class="description">
+                <label for="self-description">tell us a little about yourself :</label>
+                <br>
+                <textarea name="description" id="" cols="30" rows="10" placeholder="only describe your skillsets"></textarea>
+            </div>
+
+            <button class="btn submit">Submit</button>
+            <button class="btn reset">Reset</button>
+        </form>
+    </body>
+</html>
