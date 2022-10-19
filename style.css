@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -7,8 +9,7 @@
 }
 
 body {
-    background-color: hsl(0, 0%, 95%);
-    margin: 0;
+    font-size: 15px;
 }
 
 .container {
@@ -16,37 +17,12 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    width: 50%;
-    margin: auto;
 }
 
-.container .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container .content .box {
-    display: grid;
-    grid-template-rows: repeat(3, 1/2fr);
-    padding: 2rem;
-}
-
-.container .content .box h1 {
-    font-family: "Big Shoulders Display", cursive;
-    font-size: 3rem;
-    color: hsl(0, 0%, 95%);
-}
-
-.container .content .box p {
-    font-family: "Lexend Deca", sans-serif;
-    color: hsla(0, 0%, 100%, 0.75);
-    line-height: 2rem;
-}
-
-img {
-    display: block;
-    max-width: 100%;
+.box {
+    height: 500px;
+    max-width: 350px;
+    flex-basis: 100%;
 }
 
 .box-1 {
@@ -63,6 +39,25 @@ img {
     border-radius: 0px 10px 10px 0px;
 }
 
+img {
+    padding: 2rem;
+}
+
+h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: xxx-large;
+    color: #fff;
+    margin-left: 30px;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 17px;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.8;
+    padding: 2rem;
+}
+
 button {
     margin-right: 2rem;
     border: 2px solid #fff;
@@ -72,8 +67,9 @@ button {
     color: var(--font-color);
     text-decoration: none;
     border: none;
-    padding: 15px 32px;
+    padding: 15px 40px;
     border-radius: 24px;
+    margin: 2rem;
 }
 
 button:hover {
@@ -99,36 +95,33 @@ button:hover {
     background-color: hsl(179, 100%, 13%);
 }
 
-@media screen and (max-width: 500px) {
-    .container {
-        width: 80%;
-    }
+footer {
+    text-align: center;
+    font-size: larger;
 }
 
 @media screen and (max-width: 768px) {
-    .container .content {
+    .container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin: auto;
-        margin-top: 30px;
+        margin-top: 17rem;
     }
 
     .box {
-        width: 100;
         height: 450px;
     }
 
     .btn {
         background-color: #fff;
-        width: 60%;
     }
-    
+
     .btn-1 {
         color: hsl(31, 77%, 52%);
     }
-    
+
     .btn-1:hover {
         background-color: hsl(31, 77%, 52%);
         color: #fff;
@@ -153,10 +146,14 @@ button:hover {
     }
 
     .box-1 {
-        border-radius: 10px 10px 0px 0px;   
+        border-radius: 10px 10px 0px 0px;
     }
 
     .box-3 {
         border-radius: 0px 0px 10px 10px;
+    }
+
+    footer {
+        display: none;
     }
 }
